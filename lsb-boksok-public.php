@@ -2,11 +2,11 @@
 /**
  * Plugin Name: Boksøk: Søkeskjema-widget
  * Description: Widget som lar besøkende søke direkte i Boksøk (boksok.no).
- * Version: 1.0
- * Text Domain: lsb-boksok-widgets
+ * Text Domain: lsb-boksok-public
  * Domain Path: /language
  * Author: Lilly Labs
  * Author URI: http://lillylabs.no
+ * Version: 1.0
  */
 
 include('class-boksok-search-form.php');
