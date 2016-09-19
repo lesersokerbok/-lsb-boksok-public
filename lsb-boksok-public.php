@@ -21,7 +21,7 @@ class LSB_Boksok_Widgets {
   }
 
 	function load_text_domain() {
-		load_plugin_textdomain( 'lsb-boksok-widgets', false, plugin_basename( dirname( __FILE__ ) ) );
+		load_plugin_textdomain( 'lsb-boksok-public', false, plugin_basename( dirname( __FILE__ ) ) );
 	}
 }
 
