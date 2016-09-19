@@ -10,8 +10,8 @@ class LSB_Boksok_Search_Widget extends WP_Widget {
 	function __construct() {
 		parent::__construct(
 			'LSB_Boksok_Search_Widget', // Base ID
-			__('Boksøk: Søkeskjema-widget', 'lsb-boksok-widgets'), // Name
-			array( 'description' => __( 'Lar besøkende søke direkte i boksøk.no.', 'lsb-boksok-widgets' ), ) // Args
+			__('Boksøk: Søkeskjema-widget', 'lsb-boksok-public'), // Name
+			array( 'description' => __( 'Lar besøkende søke direkte i boksøk.no.', 'lsb-boksok-public' ), ) // Args
 		);
 	}
 	/**
@@ -54,34 +54,34 @@ class LSB_Boksok_Search_Widget extends WP_Widget {
 	 * @param array $instance Previously saved values from database.
 	 */
 	public function form( $instance ) {
-		$title = isset( $instance['title'] ) ? $instance['title'] : __( 'Boksøk', 'lsb-boksok-widgets' );
-		$description = isset( $instance['description'] ) ? $instance['description'] : __( 'Søk etter bøker på boksøk.no.', 'lsb-boksok-widgets' );
-		$placeholder = isset( $instance['placeholder'] ) ? $instance['placeholder'] : __( 'Søk etter en forfatter, en tittel eller et tema!', 'lsb-boksok-widgets' );
+		$title = isset( $instance['title'] ) ? $instance['title'] : __( 'Boksøk', 'lsb-boksok-public' );
+		$description = isset( $instance['description'] ) ? $instance['description'] : __( 'Søk etter bøker på boksøk.no.', 'lsb-boksok-public' );
+		$placeholder = isset( $instance['placeholder'] ) ? $instance['placeholder'] : __( 'Søk etter en forfatter, en tittel eller et tema!', 'lsb-boksok-public' );
 		$main_cat_filter = isset( $instance['main_cat_filter'] ) ? $instance['main_cat_filter'] : 'no-filter';
 
 		?>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>">
-				<?php _e( 'Tittel:', 'lsb-boksok-widgets' ); ?>
+				<?php _e( 'Tittel:', 'lsb-boksok-public' ); ?>
 			</label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
 		</p>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'description' ); ?>">
-				<?php _e( 'Beskrivelse:', 'lsb-boksok-widgets' ); ?>
+				<?php _e( 'Beskrivelse:', 'lsb-boksok-public' ); ?>
 			</label>
 			<textarea class="widefat" id="<?php echo $this->get_field_id( 'description' ); ?>" name="<?php echo $this->get_field_name( 'description' ); ?>" ><?php echo esc_attr( $description ); ?></textarea>
 		</p>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'placeholder' ); ?>">
-				<?php _e( 'Søkefelt placeholder:', 'lsb-boksok-widgets' ); ?>
+				<?php _e( 'Søkefelt placeholder:', 'lsb-boksok-public' ); ?>
 			</label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'placeholder' ); ?>" name="<?php echo $this->get_field_name( 'placeholder' ); ?>" type="text" value="<?php echo esc_attr( $placeholder ); ?>">
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'main_cat_filter' ); ?>"><?php _e( 'Filtrer på kategori:', 'lsb-boksok-widgets' ); ?></label><br/>
+			<label for="<?php echo $this->get_field_id( 'main_cat_filter' ); ?>"><?php _e( 'Filtrer på kategori:', 'lsb-boksok-public' ); ?></label><br/>
 			<select id="<?php echo $this->get_field_id( 'main_cat_filter' ); ?>" name="<?php echo $this->get_field_name( 'main_cat_filter' ); ?>">
-				<option value="no-filter" <?php echo ('no-filter' == $main_cat_filter) ? 'selected' : ''; ?>><?php _e( 'Inget filter', 'lsb-boksok-widgets' ); ?></option>
+				<option value="no-filter" <?php echo ('no-filter' == $main_cat_filter) ? 'selected' : ''; ?>><?php _e( 'Inget filter', 'lsb-boksok-public' ); ?></option>
 				<option value="litt-a-lese" <?php echo ('litt-a-lese' == $main_cat_filter) ? 'selected' : ''; ?>>
           Litt å lese
         </option>
